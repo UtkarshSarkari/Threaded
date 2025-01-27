@@ -8,7 +8,7 @@ export default function TopBar() {
     <nav className='topbar'>
       <Link href='/' className='flex items-center gap-4'>
         <Image src='/icons/molecule.svg' alt='logo' width={28} height={28} />
-        <p className="head-text logoFont">
+        <p className="text-heading1-bold text-light-1 logoFont">
           Threaded
         </p>
       </Link>
@@ -17,12 +17,17 @@ export default function TopBar() {
           <SignedIn>
             <SignOutButton>
               <div className="flex cursor-pointer">
-                <Image src='/icons/logout.svg' alt='logout' width={29} height={29} />
+                <Image src='/icons/logout.svg' alt='logout' width={32} height={32} />
               </div>
             </SignOutButton>
           </SignedIn>
         </div>
-        <OrganizationSwitcher />
+        <OrganizationSwitcher appearance={{
+          elements: {
+            organizationSwitcherTrigger: "py-2 px-4",
+            avatarBox: "h-7 w-7"
+          }
+        }} />
       </div>
     </nav>
   )
