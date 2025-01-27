@@ -5,6 +5,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  margin: 0px;
+  padding: 0px;
+}
+
 .logoFont {
   font-family: "Square Peg", serif;
   font-weight: 400;
@@ -205,7 +210,7 @@
 }
 
 .account-form_input {
-  @apply border border-dark-4 bg-dark-3 text-light-1 !important;
+  @apply border border-dark-4 bg-dark-3 text-light-1 mt-0 !important;
 }
 
 /* Comment Form */
@@ -215,4 +220,10 @@
 
 .comment-form_btn {
   @apply rounded-3xl bg-primary-500 px-8 py-2 !text-small-regular text-light-1 max-xs:w-full !important;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }
