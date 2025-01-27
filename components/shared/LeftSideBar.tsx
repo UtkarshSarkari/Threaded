@@ -3,11 +3,10 @@ import React from 'react'
 import { sidebarLinks } from '../../constants/index';
 import Link from 'next/link';
 import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { SignOutButton, SignedIn } from '@clerk/nextjs';
 
 export default function LeftSideBar() {
-  const router = useRouter();
   const pathname = usePathname();
   return (
     <section className='custom-scrollbar leftsidebar'>
@@ -26,7 +25,7 @@ export default function LeftSideBar() {
       </div>
       <div className="mt-10 px-6">
         <SignedIn>
-          <SignOutButton>
+          <SignOutButton redirectUrl='/sign-in'>
             <div className="flex cursor-pointer items-center gap-4 p-4">
               <Image src='/icons/logout.svg' alt='logout' width={28} height={28} />
               <p className='text-light-2 max-lg:hidden ubuntu-medium tracking-wide'>Logout</p>
