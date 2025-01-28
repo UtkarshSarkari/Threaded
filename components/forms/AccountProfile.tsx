@@ -16,7 +16,6 @@ import { Input } from "@/components/ui/input"
 import Image from 'next/image';
 import { Textarea } from '../ui/textarea';
 import { isBase64Image } from '@/lib/utils';
-import {} from '@/lib/uploadthing';
 
 interface Props {
     user: {
